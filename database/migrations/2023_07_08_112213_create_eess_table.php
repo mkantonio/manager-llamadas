@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('eess', function (Blueprint $table) {
             $table->id('id');
             $table->string('nombre');
-            $table->string('telefono');
             $table->timestamps();
             $table->softDeletes();
         });

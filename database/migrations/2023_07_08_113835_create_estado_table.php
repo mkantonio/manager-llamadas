@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('estado', function (Blueprint $table) {
             $table->id('id');
-            $table->string('nombre');
+            $table->enum('nombre', ['Pendiente', 'Solucionado', 'Cerrado']);
             $table->string('descripcion');
             $table->timestamps();
             $table->softDeletes();
