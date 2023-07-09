@@ -12,13 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('llamada', function (Blueprint $table) {
-            $table->unsignedBigInteger('id')->primary();
+            $table->id('id');
             $table->unsignedBigInteger('eess_id');
+            $table->foreignId('telefono_id')->constrained('telefono');
             $table->foreign('eess_id')->references('id')->on('eess');
-            $table->foreignId('operador')->constrained('operador');
-            $table->foreignId('estado')->constrained('estado');
+            $table->foreignId('operador_id')->constrained('operador');
+            $table->foreignId('estado_id')->constrained('estado');
+            $table->foreignId('categoria_id')->constrained('categoria');
             $table->string('descripcion');
-            $table->string('categoria')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
