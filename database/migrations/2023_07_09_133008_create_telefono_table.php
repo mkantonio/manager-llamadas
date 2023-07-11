@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('telefono');
             $table->foreignId('eess_id')->constrained('eess');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

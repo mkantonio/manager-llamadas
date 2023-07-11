@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('operador_id')->constrained('operador');
             $table->foreignId('estado_id')->constrained('estado');
             $table->foreignId('categoria_id')->constrained('categoria');
-            $table->string('descripcion');
+            $table->text('descripcion');
             $table->timestamps();
             $table->softDeletes();
         });
