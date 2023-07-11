@@ -20,8 +20,10 @@ class CategoriaFactory extends Factory
 
     public function definition(): array
     {
+        $categorias = ['Facturacion', 'Problema técnico', 'Terminal'];
         return [
-            'nombre' => fake()->name(),
+            'nombre' => fake()->randomElement($categorias),
+            // 'nombre' => fake()->name(),
             'descripcion' => fake()->text(),
         ];
     }
