@@ -19,7 +19,7 @@ class Categoria extends Model
     ];
 
 
-    public function llamada(): hasMany
+    public function llamadas(): hasMany
     {
         return $this->hasMany(Llamada::class);
     }

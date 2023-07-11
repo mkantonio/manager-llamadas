@@ -25,4 +25,24 @@ class Llamada extends Model
     {
         return $this->belongsTo(Categoria::class);
     }
+
+    public function operador(): BelongsTo
+    {
+        return $this->belongsTo(Operador::class);
+    }
+
+    public function estado(): BelongsTo
+    {
+        return $this->belongsTo(Estado::class);
+    }
+
+    public function eess(): BelongsTo
+    {
+        return $this->belongsTo(Eess::class);
+    }
+
+    public function telefono(): BelongsTo
+    {
+        return $this->belongsTo(Telefono::class);
+    }
 }

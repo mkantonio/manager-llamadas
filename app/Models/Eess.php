@@ -17,8 +17,13 @@ class Eess extends Model
         'nombre',
     ];
 
-    public function telefono(): hasMany
+    public function telefonos(): hasMany
     {
         return $this->hasMany(Telefono::class);
+    }
+
+    public function llamadas(): hasMany
+    {
+        return $this->hasMany(Llamada::class);
     }
 }
