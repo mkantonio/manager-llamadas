@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // \App\Models\User::factory(10)->create();
-        Categoria::factory(10)->create();
+        Categoria::factory(3)->create();
         Operador::factory(4)->create();
         $this->call([
             EstadoSeeder::class,
